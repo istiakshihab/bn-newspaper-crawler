@@ -1,4 +1,4 @@
-# bn-newspaper-crawler
+# Bangla Newspaper and News Crawler
 
 Bangla Newspaper Crawlers written using Scrapy.
 

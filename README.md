@@ -20,3 +20,5 @@ Dependencies:
 
 TODO:
 - Selenium Integration for JS Heavy Websites
+
+Free for Educational Use. Strictly No to any sort of Commercial Usage. GPLv2 Licensed.

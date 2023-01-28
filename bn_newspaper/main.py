@@ -8,6 +8,7 @@ from spiders.ittefaq import IttefaqSpider
 from spiders.janakantha import JanakanthaSpider
 from spiders.kalerkantho import KalerkanthoSpider
 from spiders.tbsbangla import TbsbanglaSpider
+from spiders.prothomalo import ProthomaloSpider
 
 from scrapy.utils.project import get_project_settings
 from scrapy.crawler import CrawlerProcess
@@ -25,4 +26,5 @@ process.crawl(IttefaqSpider)
 process.crawl(JanakanthaSpider)
 process.crawl(KalerkanthoSpider)
 process.crawl(TbsbanglaSpider)
+process.crawl(ProthomaloSpider)
 process.start()

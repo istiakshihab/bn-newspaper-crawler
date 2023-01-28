@@ -13,6 +13,7 @@ Newspaper Covered So far:
 - Janakantha
 - Kalerkantho
 - TBS Bangla
+- Prothom Alo
 
 Dependencies:
 - Scrapy

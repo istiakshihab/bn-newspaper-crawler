@@ -1,7 +1,11 @@
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from newspaper import Article
-from bn_newspaper import utils
+
+import sys
+sys.path.append("..")
+
+import utils
 
 class AmadershomoySpider(CrawlSpider):
     name = 'amadershomoy'

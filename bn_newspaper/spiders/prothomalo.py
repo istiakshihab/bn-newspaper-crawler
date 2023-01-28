@@ -1,30 +1,24 @@
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from newspaper import Article
+from bn_newspaper import utils
 
-import sys
-sys.path.append("..")
-
-import utils
-
-# from bn_newspaper import utils
-
-class AmadershomoySpider(CrawlSpider):
-    name = 'amadershomoy'
-    allowed_domains = ['amadershomoy.com']
-    start_urls = ['http://amadershomoy.com/']
+class ProthomaloSpider(CrawlSpider):
+    name = 'prothomalo'
+    allowed_domains = ['prothomalo.com']
+    start_urls = ['https://www.prothomalo.com/bangladesh/coronavirus/0qx9w13xe8']
 
     rules = (
         Rule(
             LinkExtractor(
-                allow = (r'/[a-z-]+/article/\d+/.+'),
+                allow = (r'/[a-z-]+/.+'),
                 unique= True,
                 ), 
             callback="parse", 
             follow=True
-            ),
+            ), 
         )
-
+        
     def parse(self, response):
         article = Article(
             url = response.url,
@@ -35,7 +29,7 @@ class AmadershomoySpider(CrawlSpider):
         article.parse()
         article.nlp()
         category = response.css(
-            '.active > a:nth-child(1)::text'
+            '.vXi2j::text'
         ).get()
 
         item = utils.return_items(

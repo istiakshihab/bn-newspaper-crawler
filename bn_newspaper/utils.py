@@ -14,9 +14,6 @@ def return_items(article, top=False, category="", language='bangla'):
     try:
         d = article.publish_date
         d = d.strftime('%Y-%m-%d %H:%M:%S')
-        dt = datetime.datetime.now() + datetime.timedelta(hours=6)
-        if dt.strftime('%Y-%m-%d %H:%M:%S')  < d:
-            raise Exception('Date {}  wrong parsed for url {}'.format(d, article.url))
     except Exception as e:
         print(e)
 
